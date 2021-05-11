@@ -24,7 +24,8 @@ An extention of the radio project in main Eng86 repo, extended for entity framew
   3. Complete/update project board
 
   Next steps
-  1. Complete not completed steps, start building playlist functions and tests.
+  1. Complete not completed steps 
+  2. Start building playlist functions and tests.
   
   ### RetroSpective
   <p>
