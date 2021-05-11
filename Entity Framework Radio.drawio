@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-11T12:04:55.006Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 OPR/76.0.4017.107" etag="YoWHw5qPCkZXE_9uu07A" version="14.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-11T12:06:06.770Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 OPR/76.0.4017.107" etag="KePhxgJXDKmeJ6JnbYYy" version="14.6.0" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1460" dy="681" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="1202" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -175,7 +175,7 @@
         <mxCell id="IRdwuqQ0i1ZMuO39jBL1-26" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" vertex="1" parent="IRdwuqQ0i1ZMuO39jBL1-25">
           <mxGeometry width="30" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="IRdwuqQ0i1ZMuO39jBL1-27" value="last_name_ char(50) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="IRdwuqQ0i1ZMuO39jBL1-25">
+        <mxCell id="IRdwuqQ0i1ZMuO39jBL1-27" value="play_list_name_char(50) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="IRdwuqQ0i1ZMuO39jBL1-25">
           <mxGeometry x="30" width="220" height="20" as="geometry" />
         </mxCell>
         <mxCell id="IRdwuqQ0i1ZMuO39jBL1-28" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="1">
@@ -204,6 +204,9 @@
         </mxCell>
         <mxCell id="IRdwuqQ0i1ZMuO39jBL1-36" value="playlists_ datetime NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="IRdwuqQ0i1ZMuO39jBL1-34">
           <mxGeometry x="30" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IRdwuqQ0i1ZMuO39jBL1-37" value="name_ char(50) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="290" width="220" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
