@@ -1,0 +1,46 @@
+﻿<Page x:Class="RadioGUI.PlaylistPlayback"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RadioGUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PlaylistPlayback">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="ChannelDisplay" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="7" Background="DarkGreen" Margin="0,0,0,54" Grid.RowSpan="2"  ></TextBlock>
+        <ToggleButton x:Name="TogglePower"  Grid.Column="0" Grid.Row="1" Click="ToggleOnOff" IsChecked="False">Power</ToggleButton>
+
+        <Slider x:Name="volumeslider" Grid.ColumnSpan="2" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="120" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="ChangeVolume"/>
+        <TextBox x:Name="volumedisplay" Text="{Binding ElementName=volumeslider, Path=Value, UpdateSourceTrigger=PropertyChanged}" Grid.Column="7" Grid.Row="5"></TextBox>
+
+        <Button Grid.Column="0" Content="Manage Channels" Click="ManageChannels"></Button>
+        <Button Grid.Column="3" Grid.Row="3" Click="PlaybackControls">Rewind</Button>
+        <Button Grid.Column="4" Grid.Row="3" Click="PlaybackControls">Pause/Play</Button>
+        <Button Grid.Column="5" Grid.Row="3" Click="PlaybackControls">FF</Button>
+        <ListBox x:Name="Channels" Grid.Column="0" Grid.Row="3" Grid.RowSpan="5"/>
+    </Grid>
+</Page>

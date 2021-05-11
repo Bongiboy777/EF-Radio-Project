@@ -1,0 +1,7 @@
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#OOP\Radio\RadioApp\obj\Debug\net2.0-windows\RadioApp.csprojAssemblyReference.cache
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#OOP\Radio\RadioApp\obj\Debug\net2.0-windows\Interop.WMPLib.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#OOP\Radio\RadioApp\obj\Debug\net2.0-windows\Interop.WMPDXMLib.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#OOP\Radio\RadioApp\obj\Debug\net2.0-windows\RadioApp.csproj.ResolveComReference.cache
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#OOP\Radio\RadioApp\obj\Debug\net2.0-windows\RadioApp.AssemblyInfoInputs.cache
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#OOP\Radio\RadioApp\obj\Debug\net2.0-windows\RadioApp.AssemblyInfo.cs
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#OOP\Radio\RadioApp\obj\Debug\net2.0-windows\RadioApp.csproj.CoreCompileInputs.cache
