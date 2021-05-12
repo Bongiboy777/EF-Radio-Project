@@ -7,13 +7,19 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="LoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ManageChannels.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PlaylistPlayback.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="RadioDial.xaml.cs">
+    <Compile Update="Registration Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TopFramePage.xaml.cs">
@@ -21,6 +27,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -30,7 +39,10 @@
     <Page Update="PlaylistPlayback.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="RadioDial.xaml">
+    <Page Update="Registration Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TopFramePage.xaml">

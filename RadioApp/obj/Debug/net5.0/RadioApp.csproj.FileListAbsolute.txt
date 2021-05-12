@@ -46,3 +46,6 @@ C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Ra
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioApp\bin\Debug\net5.0\Interop.WMPLib.dll
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioApp\bin\Debug\net5.0\Interop.WMPDXMLib.dll
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioApp\obj\Debug\net5.0\RadioApp.csproj.CopyComplete
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioApp\bin\Debug\net5.0\RadioApp.runtimeconfig.json
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioApp\bin\Debug\net5.0\RadioApp.runtimeconfig.dev.json
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioApp\obj\Debug\net5.0\RadioApp.genruntimeconfig.cache

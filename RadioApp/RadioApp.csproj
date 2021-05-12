@@ -1,38 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <COMReference Include="{6bf52a50-394a-11d3-b153-00c04f79faa6}">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>1</VersionMajor>
-      <Guid>6bf52a50-394a-11d3-b153-00c04f79faa6</Guid>
-    </COMReference>
-    <COMReference Include="{73f0dd5c-d071-46b6-a8bf-897c84eaac49}">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>1</VersionMajor>
-      <Guid>73f0dd5c-d071-46b6-a8bf-897c84eaac49</Guid>
-    </COMReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="..\..\..\..\..\..\..\..\..\Downloads\SpotifyAPI.Web.Auth-net5.0\SpotifyAPI.Web.Auth.dll" Link="SpotifyAPI.Web.Auth.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Reference>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Reference Include="..\..\..\..\..\..\..\..\..\Downloads\SpotifyAPI.Web-net5.0\SpotifyAPI.Web.dll" Link="SpotifyAPI.Web.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Reference>
-  </ItemGroup>
-
-
-
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
 </Project>

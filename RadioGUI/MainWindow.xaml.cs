@@ -13,26 +13,40 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using RadioApp;
+using Radio;
+using RadioDatabase;
 
 namespace RadioGUI
 {
     public partial class MainWindow : Window
     {
-        Radio radio;
+        RadioPlayback radio;
         public static ManageChannels channelManager = new ManageChannels();
         public static PlaylistPlayback RadioPlayer = new PlaylistPlayback();
-        
-   
+
+
         public MainWindow()
         {
             InitializeComponent();
+            LoginPage loginPage = new LoginPage();
+            Registration_Page registration_Page = new Registration_Page();
+
+            MainFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
             TopFrame.Content = new TopFramePage();
-            MainFrame.Content = RadioPlayer;
+
+            loginPage.Login.Click += (object sender, RoutedEventArgs e) => MainFrame.Content = loginPage.Verify();
+            loginPage.Register.Click += (object sender, RoutedEventArgs e) => MainFrame.Content = registration_Page;
+
+            MainFrame.Content = loginPage;
         }
 
-        
+        public static void NavigatePage(int page)
+        {
 
-        
+        }
+
+
+
+
     }
 }

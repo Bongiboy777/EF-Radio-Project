@@ -10,7 +10,8 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using RadioApp;
+using Radio;
+using RadioDatabase;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -56,7 +57,7 @@ namespace RadioGUI
 
         private void Playback(object sender, RoutedEventArgs e)
         {
-            
+
             MainWindow.RadioPlayer.UpdateChannels();
             this.NavigationService.Navigate(MainWindow.RadioPlayer);
         }
@@ -64,11 +65,11 @@ namespace RadioGUI
         public void PopulateFileList()
         {
             Dictionary<string, string> files = new Dictionary<string, string>();
-            string[] mediaFiles = Directory.GetFiles(Radio.mediaPaths[0], "*.*").Where(s => new string[] {".wav",".mp3" }.Contains(System.IO.Path.GetExtension(s))).ToArray();
+            string[] mediaFiles = Directory.GetFiles(RadioPlayback.mediaPaths[0], "*.*").Where(s => new string[] { ".wav", ".mp3" }.Contains(System.IO.Path.GetExtension(s))).ToArray();
             foreach (var item in mediaFiles)
             {
-                files.Add(item.Replace(Radio.mediaPaths[0], ""), item);
-                MusicFiles.Items.Add(item.Replace(Radio.mediaPaths[0],""));
+                files.Add(item.Replace(RadioPlayback.mediaPaths[0], ""), item);
+                MusicFiles.Items.Add(item.Replace(RadioPlayback.mediaPaths[0], ""));
             }
         }
 
@@ -77,6 +78,6 @@ namespace RadioGUI
             ChannelPlaylist.Items.Add(MusicFiles.SelectedItem);
         }
 
-        
+
     }
 }

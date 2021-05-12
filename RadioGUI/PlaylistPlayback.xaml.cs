@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using RadioApp;
+using RadioDatabase;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using Radio;
 using System.Windows.Shapes;
 
 namespace RadioGUI
@@ -21,13 +22,13 @@ namespace RadioGUI
     /// </summary>
     public partial class PlaylistPlayback : Page
     {
-        Radio radio;
+        RadioPlayback radio;
         public PlaylistPlayback()
         {
             InitializeComponent();
-            radio = new Radio();
+            radio = new RadioPlayback();
             volumeslider.Value = 50;
-            
+
         }
 
         public void ToggleOnOff(object sender, RoutedEventArgs e)
@@ -66,13 +67,13 @@ namespace RadioGUI
         {
             string input = (sender as Button).Content.ToString();
             radio.Playback(input);
-            
+
         }
 
         private void ManageChannels(object sender, RoutedEventArgs e)
         {
             MainWindow.channelManager.Channels.Items.Refresh();
-            
+
             MainWindow.channelManager.Channels.UpdateLayout();
             this.NavigationService.Navigate(MainWindow.channelManager);
         }
@@ -86,7 +87,7 @@ namespace RadioGUI
             {
                 b.Click += ChangeChannel;
             }
-            
+
         }
     }
 }
