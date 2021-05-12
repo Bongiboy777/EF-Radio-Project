@@ -8,8 +8,7 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Frame x:Name="TopFrame" Margin="0,0,0,400"/>
-        <Frame x:Name="MainFrame" Margin="0,50,0,0"/>
+   
 
     </Grid>
 

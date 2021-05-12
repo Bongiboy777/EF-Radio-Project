@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using Radio;
+using RadioDatabase;
 using System.Windows.Shapes;
 
 namespace RadioGUI
@@ -20,15 +22,22 @@ namespace RadioGUI
     /// </summary>
     public partial class LoginPage : Page
     {
+        UserManager userManager = new UserManager();
         public LoginPage()
         {
             InitializeComponent();
-
+            Login.Click += Verify;
         }
 
-        public object Verify()
+        public void Verify(object sender, RoutedEventArgs e)
         {
-            return new PlaylistPlayback();
+            if (userManager.VerifyUser(out string error, Password.Text, UserName.Text))
+            {
+                MainWindow.MainFrame.Content = new PlaylistPlayback();
+            }
+
+            MessageBox.Show(error);
+           
         }
     }
 }

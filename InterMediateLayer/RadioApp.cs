@@ -118,6 +118,12 @@ namespace Radio
             using (var db = new RadioContext())
             {
                 errorMessage = null;
+
+                if (db.Users.Where(u => u.Email == email).Count() != 0)
+                {
+                    errorMessage = $"This email address is already in use with another account.";
+                    return;
+                }
                 try
                 {
                     db.Users.Add(new User(firstName, lastName, userName, email, passWord));
@@ -138,16 +144,42 @@ namespace Radio
             }
         }
 
+        public void CreateUser(string firstName = "Bongani", string lastName = "Luwemba", string userName = "Bongiboy777", string email = "Bongtheman@outlook.com", string passWord = "1234567")
+        {
+            using (var db = new RadioContext())
+            {
+               
+                try
+                {
+                    db.Users.Add(new User(firstName, lastName, userName, email, passWord));
+
+                    db.SaveChanges();
+                }
+
+                catch (DbUpdateConcurrencyException e)
+                {
+                    Console.WriteLine($"Could not add user please check fields: {e.Message}");
+                }
+
+                catch (DbUpdateException ex)
+                {
+                    Console.WriteLine($"Could not add user please check fields: {ex.Message}");
+                }
+
+            }
+        }
+
         public void UpdateUser(out string errorMessage, User user, string firstName = null, string lastName = null, string passWord = null, string userName = null, string email = null)
         {
             using (var db = new RadioContext())
             {
                 errorMessage = null;
-                User thisUser = db.Users.Where(u => u.UserId == user.UserId).FirstOrDefault();
+                
+                
                 try
                 {
-                    thisUser.LastName = lastName != null ? lastName : user.LastName;
-                    thisUser.FirstName = firstName != null ? firstName : user.FirstName;
+                    user.LastName = lastName != null ? lastName : user.LastName;
+                    user.FirstName = firstName != null ? firstName : user.FirstName;
 
                     db.SaveChanges();
                 }
@@ -158,7 +190,7 @@ namespace Radio
 
                 try
                 {
-                    thisUser.Username = userName != null ? userName : user.Username;
+                    user.Username = userName != null ? userName : user.Username;
                     db.SaveChanges();
 
 
@@ -172,7 +204,7 @@ namespace Radio
                 // Assign email
                 try
                 {
-                    thisUser.Email = email != null ? email : user.Email;
+                    user.Email = email != null ? email : user.Email;
                     db.SaveChanges();
                 }
 
@@ -183,7 +215,7 @@ namespace Radio
 
                 try
                 {
-                    thisUser.PassWord = passWord != null ? passWord : user.PassWord;
+                    user.PassWord = passWord != null ? passWord : user.PassWord;
                     db.SaveChanges();
                 }
 
@@ -194,6 +226,60 @@ namespace Radio
 
                 db.SaveChanges();
             }
+        }
+
+        public void RemoveUser(out string errorMessage, User user)
+        {
+            using (var db = new RadioContext())
+            {
+                errorMessage = null;
+
+
+                try
+                {
+                    db.Users.Remove(user);
+                    db.SaveChanges();
+                }
+                catch (DbUpdateException e)
+                {
+                    errorMessage = $"Could not update firstname or last name fields, please check: {e.Message}";
+                }
+
+                catch(ArgumentNullException ex)
+                {
+                    errorMessage = $"This user does not exist anymore.";
+                }
+
+                
+            }
+        }
+
+        public bool VerifyUser(out string error, string password, string email=null, string userName = null)
+        {
+            error = null;
+            User user = null;
+            using (var db = new RadioContext())
+            {
+                try
+                {
+                    user = userName != null ? db.Users.Where(u => u.Username == userName).First()
+                        : email != null ? db.Users.Where(u => u.Email == email).First() : null;
+                }
+
+                catch(InvalidOperationException e)
+                {
+                    error = email == null ? $"Username {userName} is incorrect or does not exist." : $"Email {email} is incorrect or does not exist";
+                    return false;
+                }
+
+                if(user != null)
+                {
+                    return user.PassWord == password;
+                }
+
+                return false;
+            }
+                
         }
 
     }

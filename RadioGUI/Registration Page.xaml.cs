@@ -22,28 +22,35 @@ namespace RadioGUI
     public partial class Registration_Page : Page
     {
         UserManager userManager = new UserManager();
-        private int minPasswordLength;
+        private int minPasswordLength = 7;
         public Registration_Page()
         {
             InitializeComponent();
-            SubmitRegistration.Click += SubmitDetails;
+            Submit.Click += SubmitDetails;
         }
 
         public void SubmitDetails(object sender, RoutedEventArgs e)
         {
+            string message = null;
             if (Password.Text != ConfirmPassword.Text)
             {
-                MessageBox.Show("Passwords must match");
+                message += "Passwords must match.\n";
+                
+            }
+
+            if (Password.Text.Length < minPasswordLength)
+            {
+               message += $"Password must be at least {minPasswordLength} characters long.\n";
                 return;
             }
 
-            else if (Password.Text.Length < minPasswordLength)
+            if(message != null)
             {
-                MessageBox.Show($"Password must be at least {minPasswordLength} characters long.");
-                return;
+                MessageBox.Show(message);
             }
 
             else { userManager.CreateUser(out string errorMessage, Firstname.Text, Lastname.Text); }
+            MainWindow.MainFrame.Content = new LoginPage();
 
         }
     }

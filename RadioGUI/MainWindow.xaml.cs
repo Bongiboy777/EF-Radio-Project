@@ -23,27 +23,36 @@ namespace RadioGUI
         RadioPlayback radio;
         public static ManageChannels channelManager = new ManageChannels();
         public static PlaylistPlayback RadioPlayer = new PlaylistPlayback();
-
+        public static Frame MainFrame { get; private set; } = new Frame();
 
         public MainWindow()
         {
+           
             InitializeComponent();
             LoginPage loginPage = new LoginPage();
             Registration_Page registration_Page = new Registration_Page();
 
             MainFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
-            TopFrame.Content = new TopFramePage();
 
-            loginPage.Login.Click += (object sender, RoutedEventArgs e) => MainFrame.Content = loginPage.Verify();
+          
             loginPage.Register.Click += (object sender, RoutedEventArgs e) => MainFrame.Content = registration_Page;
 
             MainFrame.Content = loginPage;
+            Content = MainFrame;
         }
 
         public static void NavigatePage(int page)
         {
-
+            switch(page)
+            {
+                case 0:
+                    MainFrame.Content = new LoginPage();
+                    break;
+                    
+            }
         }
+
+
 
 
 
