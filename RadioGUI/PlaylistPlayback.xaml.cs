@@ -13,15 +13,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using Radio;
+using InterMediateLayer;
 using System.Windows.Shapes;
 
 namespace RadioGUI
 {
+     
     /// <summary>
     /// Interaction logic for PlaylistPlayback.xaml
     /// </summary>
     public partial class PlaylistPlayback : Page
     {
+        PlaylistManager PlaylistManager = new PlaylistManager();
+
         RadioPlayback radio;
         public PlaylistPlayback()
         {
@@ -70,12 +74,9 @@ namespace RadioGUI
 
         }
 
-        private void ManageChannels(object sender, RoutedEventArgs e)
+        private void GotoSettings(object sender, RoutedEventArgs e)
         {
-            MainWindow.channelManager.Channels.Items.Refresh();
-
-            MainWindow.channelManager.Channels.UpdateLayout();
-            this.NavigationService.Navigate(MainWindow.channelManager);
+            this.NavigationService.Navigate(new SettingsPage());
         }
 
         public void UpdateChannels()

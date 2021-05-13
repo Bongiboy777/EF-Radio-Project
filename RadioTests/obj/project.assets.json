@@ -6901,9 +6901,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\RadioTests.csproj",
-      "projectName": "RadioTests",
-      "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\RadioTests.csproj",
+      "projectUniqueName": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\Tests.csproj",
+      "projectName": "Tests",
+      "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\Tests.csproj",
       "packagesPath": "C:\\Users\\Bongt\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\obj\\",
       "projectStyle": "PackageReference",

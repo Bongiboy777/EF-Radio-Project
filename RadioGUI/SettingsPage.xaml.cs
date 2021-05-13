@@ -23,6 +23,11 @@ namespace RadioGUI
         public SettingsPage()
         {
             InitializeComponent();
+            ManageChannels.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = new ManageChannels();
+            AccountSettings.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = new AccountSettings();
+            SearchDirectories.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = new SearchDirectories();
+            Return.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = MainWindow.RadioPlayer;
         }
     }
 }
+

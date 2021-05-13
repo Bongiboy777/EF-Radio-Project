@@ -15,7 +15,7 @@ using RadioDatabase;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using InterMediateLayer;
 namespace RadioGUI
 {
     /// <summary>
@@ -23,26 +23,20 @@ namespace RadioGUI
     /// </summary>
     public partial class ManageChannels : Page
     {
+        PlaylistManager PlaylistManager = new PlaylistManager();
         public ManageChannels()
         {
             InitializeComponent();
             PopulateFileList();
+            BackToSettings.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = new SettingsPage();
         }
 
         private void AddChannel(object sender, RoutedEventArgs e)
         {
-            //if (NameChannel.Text != "" && NameChannel.Text != "NameChannel")
-            //{
-            //    Channels.Items.Add(new Button { Content = NameChannel.Text }); // Add new object
-            //}
-            //else
-            //{
-            //    Channels.Items.Add(new Button { Content = $"Channel {Channels.Items.Count + 1}" }); // Add new object
-            //}
-
+            PlaylistManager.AddPlaylist(NameChannel.Text);
             Channels.Items.Add(new Button { Content = $"Channel {Channels.Items.Count + 1}" }); // Add new object
-            //(Channels.Items[Channels.Items.Count - 1] as Button).Click += ChangeChannel; // Add click event change channel to this object
-
+            
+            
 
         }
         private void DeleteChannel(object sender, RoutedEventArgs e)
@@ -65,17 +59,19 @@ namespace RadioGUI
         public void PopulateFileList()
         {
             Dictionary<string, string> files = new Dictionary<string, string>();
-            string[] mediaFiles = Directory.GetFiles(RadioPlayback.mediaPaths[0], "*.*").Where(s => new string[] { ".wav", ".mp3" }.Contains(System.IO.Path.GetExtension(s))).ToArray();
+            string[] mediaFiles = Directory.GetFiles(PlaylistManager.mediaPaths[0], "*.*").Where(s => new string[] { ".wav", ".mp3" }.Contains(System.IO.Path.GetExtension(s))).ToArray();
             foreach (var item in mediaFiles)
             {
-                files.Add(item.Replace(RadioPlayback.mediaPaths[0], ""), item);
-                MusicFiles.Items.Add(item.Replace(RadioPlayback.mediaPaths[0], ""));
+                files.Add(item.Replace(PlaylistManager.mediaPaths[0], ""), item);
+                MusicFiles.Items.Add(item.Replace(PlaylistManager.mediaPaths[0], ""));
             }
+            
         }
 
         public void PopulatePlayList(object sender, RoutedEventArgs e)
         {
             ChannelPlaylist.Items.Add(MusicFiles.SelectedItem);
+            PlaylistManager.AddToPlaylist(NameChannel.Text, MusicFiles.SelectedItem as string);
         }
 
 

@@ -113,3 +113,7 @@ C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Ra
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\InterMediateLayer.runtimeconfig.json
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\InterMediateLayer.runtimeconfig.dev.json
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\InterMediateLayer.exe
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\AccountSettings.g.cs
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\SearchDirectories.g.cs
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\AccountSettings.baml
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\SearchDirectories.baml

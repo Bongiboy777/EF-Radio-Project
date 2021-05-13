@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using Radio;
+using InterMediateLayer;
 using RadioDatabase;
 using System.Windows.Shapes;
 
@@ -34,10 +35,12 @@ namespace RadioGUI
             if (userManager.VerifyUser(out string error, Password.Text, UserName.Text))
             {
                 MainWindow.MainFrame.Content = new PlaylistPlayback();
+                
             }
-
-            MessageBox.Show(error);
-           
+            else
+            {
+                MessageBox.Show(error);
+            }
         }
     }
 }

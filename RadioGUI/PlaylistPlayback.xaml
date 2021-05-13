@@ -37,7 +37,7 @@
         <Slider x:Name="volumeslider" Grid.ColumnSpan="2" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="120" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="ChangeVolume"/>
         <TextBox x:Name="volumedisplay" Text="{Binding ElementName=volumeslider, Path=Value, UpdateSourceTrigger=PropertyChanged}" Grid.Column="7" Grid.Row="5"></TextBox>
 
-        <Button Grid.Column="0" Content="Manage Channels" Click="ManageChannels"></Button>
+        <Button Grid.Column="0" Content="Settings" Click="GotoSettings"></Button>
         <Button Grid.Column="3" Grid.Row="3" Click="PlaybackControls">Rewind</Button>
         <Button Grid.Column="4" Grid.Row="3" Click="PlaybackControls">Pause/Play</Button>
         <Button Grid.Column="5" Grid.Row="3" Click="PlaybackControls">FF</Button>

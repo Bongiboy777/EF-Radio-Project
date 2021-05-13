@@ -24,6 +24,7 @@ namespace RadioGUI
         public static ManageChannels channelManager = new ManageChannels();
         public static PlaylistPlayback RadioPlayer = new PlaylistPlayback();
         public static Frame MainFrame { get; private set; } = new Frame();
+        
 
         public MainWindow()
         {
@@ -41,16 +42,7 @@ namespace RadioGUI
             Content = MainFrame;
         }
 
-        public static void NavigatePage(int page)
-        {
-            switch(page)
-            {
-                case 0:
-                    MainFrame.Content = new LoginPage();
-                    break;
-                    
-            }
-        }
+    
 
 
 
