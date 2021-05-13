@@ -57,6 +57,30 @@ An extention of the radio project in main Eng86 repo, extended for entity framew
   Sprint was somewhat productive, but was held back by minimal planning of database aspects and general foresight. Could have been managed better but made steady progress. Have clearer idea of upcoming problems and potential solutions regarding database. For next time, plan out the architecture and build a mental user story going through all processes.
   </p>
   
+    - ## Sprint 3 - 13/05/2021
+  ### Review 
+  
+  Completed
+  1. Wireframing the gui
+  2. Adding settings page and completing navigation
+  3. Adding Pfunctions to add and remove playlist
+  4. Integrating tracks column with IWMP interface
+  
+  Not Completed
+  1. Testing playlist functions to add and remove
+  2. Adding tracks to playlist functions
+  3. Adding search directories
+
+  Next steps
+  1. Find a way to add tracks to playlist
+  2. Test all playlist functions
+  3. Add search directory functionality
+  
+  ### RetroSpective
+  <p>
+  
+  </p>
+  
   
   
 
