@@ -81,7 +81,7 @@ An extention of the radio project in main Eng86 repo, extended for entity framew
   
   </p>
   
-      - ## Sprint 4 - 14/05/2021
+- ## Sprint 4 - 14/05/2021
   ### Review 
   
   Completed
@@ -105,7 +105,7 @@ An extention of the radio project in main Eng86 repo, extended for entity framew
   
   </p>
   
-      - ## Sprint 5 - 15/05/2021
+- ## Sprint 5 - 15/05/2021
   ### Review 
   
   Completed
@@ -129,7 +129,7 @@ An extention of the radio project in main Eng86 repo, extended for entity framew
   
   </p>
   
-      - ## Sprint 6 - 16/05/2021
+- ## Sprint 6 - 16/05/2021
   ### Review 
   
   Completed
