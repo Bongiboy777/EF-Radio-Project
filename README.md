@@ -81,6 +81,79 @@ An extention of the radio project in main Eng86 repo, extended for entity framew
   
   </p>
   
+      - ## Sprint 4 - 14/05/2021
+  ### Review 
+  
+  Completed
+  1. Wireframing the gui
+  2. Adding settings page and completing navigation
+  3. Adding Pfunctions to add and remove playlist
+  4. Integrating tracks column with IWMP interface
+  
+  Not Completed
+  1. Testing playlist functions to add and remove
+  2. Adding tracks to playlist functions
+  3. Adding search directories
+
+  Next steps
+  1. Find a way to add tracks to playlist
+  2. Test all playlist functions
+  3. Add search directory functionality
+  
+  ### RetroSpective
+  <p>
+  
+  </p>
+  
+      - ## Sprint 5 - 15/05/2021
+  ### Review 
+  
+  Completed
+  1. Wireframing the gui
+  2. Adding settings page and completing navigation
+  3. Adding Pfunctions to add and remove playlist
+  4. Integrating tracks column with IWMP interface
+  
+  Not Completed
+  1. Testing playlist functions to add and remove
+  2. Adding tracks to playlist functions
+  3. Adding search directories
+
+  Next steps
+  1. Find a way to add tracks to playlist
+  2. Test all playlist functions
+  3. Add search directory functionality
+  
+  ### RetroSpective
+  <p>
+  
+  </p>
+  
+      - ## Sprint 6 - 16/05/2021
+  ### Review 
+  
+  Completed
+  1. Wireframing the gui
+  2. Adding settings page and completing navigation
+  3. Adding Pfunctions to add and remove playlist
+  4. Integrating tracks column with IWMP interface
+  
+  Not Completed
+  1. Testing playlist functions to add and remove
+  2. Adding tracks to playlist functions
+  3. Adding search directories
+
+  Next steps
+  1. Find a way to add tracks to playlist
+  2. Test all playlist functions
+  3. Add search directory functionality
+  
+  ### RetroSpective
+  <p>
+  
+  </p>
+  
+  
   
   
 
