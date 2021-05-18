@@ -1,4 +1,19 @@
 # EF-Radio-Project
+
+## Contents
+
+1. Project Description
+1. Preparation
+2. Approach
+3. Sprints
+4. Review
+5. Retrospective
+6. Guide
+
+
+
+## Project Description
+
 An extention of the radio project in main Eng86 repo, extended for entity framework project.
 
 
