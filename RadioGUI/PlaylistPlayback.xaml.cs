@@ -1,50 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using InterMediateLayer;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using RadioDatabase;
+using WMPLib;
+using WMPDXMLib;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using Radio;
-using InterMediateLayer;
-using System.Windows.Shapes;
+using System.Runtime.InteropServices;
+using System.Windows.Controls;
+using AxWMPLib;
 
 namespace RadioGUI
 {
-     
+
     /// <summary>
     /// Interaction logic for PlaylistPlayback.xaml
     /// </summary>
     public partial class PlaylistPlayback : Page
     {
-        PlaylistManager PlaylistManager = new PlaylistManager();
-
-        RadioPlayback radio;
+        PlaylistManager playlistManager = new PlaylistManager();
+        UserManager userManager = new UserManager();
+        TrackManager TrackManager = new TrackManager();
+    
         public PlaylistPlayback()
         {
+            
             InitializeComponent();
-            radio = new RadioPlayback();
-            volumeslider.Value = 50;
+            UpdateChannels();
+            //MainWindow.radioPlayback.x.CurrentItemChange += TrackChange;
+            WelcomeText.Text = LoginPage.loggedIn ? $"Hello {UserManager.User.GetFullName()}" : "Hello user";
+            volumeslider.Value = MainWindow.radioPlayback.Volume != 50 ? MainWindow.radioPlayback.Volume: 50;
+            //Binding binding = new Binding("currentPositionString") { Source = MainWindow.radioPlayback.x.controls, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged, Mode = BindingMode.OneWay };
+            //binding.IsAsync = true;
+            //BindingOperations.SetBinding(volumedisplay, TextBox.TextProperty, binding);
 
+            NextTrackButton.Click += (object sender, RoutedEventArgs e) => { MainWindow.radioPlayback.NextTrack(sender, e); UpdateChanneldisplay(); };
+            PauseButton.Click += MainWindow.radioPlayback.TogglePause;
+            PreviousTrackButton.Click += (object sender, RoutedEventArgs e) => { MainWindow.radioPlayback.PreviousTrack(sender, e); UpdateChanneldisplay(); };
+            Channels.SelectionChanged += PopulateTrackList;
+
+            Trackposition.Visibility = Visibility.Hidden;
+ 
+            @return.Click += (object sender, RoutedEventArgs e) => { MainWindow.radioPlayback.Stop(); MainWindow.MainFrame.Content = new LoginPage(); };
+
+        }
+
+        public void UpdateChanneldisplay()
+        {
+            ChannelDisplay.Text = Channels.SelectedItem != null ? $"Playing {(Channels.SelectedItem as Button).Content as string} - {Tracklist.SelectedItem as string} ": "Playing track" ;
+            
         }
 
         public void ToggleOnOff(object sender, RoutedEventArgs e)
         {
             if (TogglePower.IsChecked.Value == true)
             {
-                radio.TurnOn();
-                ChannelDisplay.Text = $"Channel {radio.Channel}";
+
+                MainWindow.radioPlayback.TurnOn();
+                ChannelDisplay.Text = $"Choose channel";
             }
             else
             {
-                radio.TurnOff();
+                MainWindow.radioPlayback.TurnOff();
                 ChannelDisplay.Text = "";
             }
         }
@@ -52,11 +67,18 @@ namespace RadioGUI
         private void ChangeChannel(object sender, RoutedEventArgs e)
         {
             //Channels.SelectedItem = (Button)sender;
-            if (radio.On)
+            if (MainWindow.radioPlayback.On)
             {
-                int channelNum = Int16.Parse((sender as Button).Content.ToString().Remove(0, 7));
-                radio.Channel = channelNum;
-                ChannelDisplay.Text = $"{radio.Play()}";
+                //int channelNum = Int16.Parse((sender as Button).Content.ToString().Remove(0, 7));
+                MainWindow.radioPlayback.Channel = 1;
+                MainWindow.radioPlayback.PlayChannel((sender as Button).Content as string);
+                if (MainWindow.radioPlayback.mediaPlayer.currentItem != null)
+                {
+                    ChannelDisplay.Text = MainWindow.radioPlayback.mediaPlayer.currentItem.name != null ? $"Playing {playlistManager.GetPlaylist((sender as Button).Content as string).Name} - {MainWindow.radioPlayback.mediaPlayer.currentItem.name}" : $"Playing { playlistManager.GetPlaylist((sender as Button).Content as string).Name}";
+
+                }
+                else { ChannelDisplay.Text = $"Playlist {(Channels.SelectedItem as Button).Content as string} empty."; }
+
             }
 
         }
@@ -64,15 +86,13 @@ namespace RadioGUI
         public void ChangeVolume(object v, RoutedPropertyChangedEventArgs<double> e)
         {
             int volume = (int)(v as Slider).Value;
-            radio.Volume = volume;
+            MainWindow.radioPlayback.Volume = volume;
+            
         }
 
-        private void PlaybackControls(object sender, RoutedEventArgs e)
-        {
-            string input = (sender as Button).Content.ToString();
-            radio.Playback(input);
+ 
 
-        }
+        
 
         private void GotoSettings(object sender, RoutedEventArgs e)
         {
@@ -83,12 +103,34 @@ namespace RadioGUI
         {
             Channels.Items.Refresh();
             Channels.UpdateLayout();
-            Channels.ItemsSource = MainWindow.channelManager.Channels.Items;
+            userManager.GetChannels(UserManager.User).Select(x => x.Name).ToList().ForEach(x =>
+            { Channels.Items.Add(new Button { Content = x }); });
+
             foreach (Button b in Channels.Items)
             {
                 b.Click += ChangeChannel;
             }
+            Channels.SelectionChanged += PopulateTrackList;
 
         }
+
+   
+        public void PopulateTrackList(object sender, SelectionChangedEventArgs e)
+        {
+            Tracklist.Items.DetachFromSourceCollection();
+            Tracklist.ItemsSource =  playlistManager.GetTracks(playlistManager.GetPlaylist((e.AddedItems[0] as Button).Content as string)).Select(z => z.Name);
+            Tracklist.Items.Refresh();
+
+            Tracklist.SelectionChanged += (object sender, SelectionChangedEventArgs e) => 
+            {
+                MainWindow.radioPlayback.mediaPlayer.URL =  TrackManager.GetTrack(e.AddedItems[0] as string).SourceURL;
+                
+                MainWindow.radioPlayback.Play();
+                UpdateChanneldisplay();
+                };
+
+        }
+
+
     }
 }

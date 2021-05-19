@@ -1000,6 +1000,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Interop.WMPLib.Reference/1.0.0.0": {
+        "runtime": {
+          "Interop.WMPLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1660,6 +1668,11 @@
       "sha512": ""
     },
     "Interop.WMPDXMLib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.WMPLib.Reference/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

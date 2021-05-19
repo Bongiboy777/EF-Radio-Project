@@ -17,11 +17,9 @@ namespace RadioDatabase
         {
         }
 
-        public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<PlayList> PlayLists { get; set; }
         public virtual DbSet<Track> Tracks { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserPlaylist> UserPlaylists { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -32,22 +30,11 @@ namespace RadioDatabase
             }
         }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
-            modelBuilder.Entity<Genre>(entity =>
-            {
-                entity.ToTable("Genre");
-
-                entity.Property(e => e.GenreId).HasColumnName("GenreID");
-
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasDefaultValueSql("('MercyTunes')");
-            });
 
             modelBuilder.Entity<PlayList>(entity =>
             {
@@ -59,7 +46,10 @@ namespace RadioDatabase
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("('2021-05-11')");
 
-                entity.Property(e => e.GenreId).HasColumnName("GenreID");
+                entity.Property(e => e.Genre).HasColumnName("Genre")
+                .IsRequired(false)
+                .IsUnicode(false)
+                .HasMaxLength(30);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -71,16 +61,11 @@ namespace RadioDatabase
                     .WithMany(p => p.PlayLists)
                     .HasForeignKey(d => d.CreatedBy)
                     .HasConstraintName("FK__PlayList__Create__5441852A");
-
-                entity.HasOne(d => d.Genre)
-                    .WithMany(p => p.PlayLists)
-                    .HasForeignKey(d => d.GenreId)
-                    .HasConstraintName("FK__PlayList__GenreI__5629CD9C");
             });
 
             modelBuilder.Entity<Track>(entity =>
             {
-                entity.HasNoKey();
+                //entity.HasNoKey();
 
                 entity.Property(e => e.Artist)
                     .IsRequired()
@@ -88,20 +73,19 @@ namespace RadioDatabase
                     .IsUnicode(false)
                     .HasDefaultValueSql("('KingKay')");
 
-                entity.Property(e => e.GenreId).HasColumnName("GenreID");
-
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(50)
+                    .HasMaxLength(150)
                     .IsUnicode(false)
                     .HasDefaultValueSql("('Salida')");
 
-                entity.Property(e => e.PlayListId).HasColumnName("PlayListID");
+                entity.Property(e => e.TrackID).HasColumnName("TrackID");
 
-                entity.HasOne(d => d.Genre)
-                    .WithMany()
-                    .HasForeignKey(d => d.GenreId)
-                    .HasConstraintName("FK__Tracks__GenreID__5EBF139D");
+                entity.Property(d => d.Genre)
+                    .IsRequired(false)
+                    .IsUnicode(false)
+                    .HasMaxLength(30);
+                    
 
                 entity.HasOne(d => d.PlayList)
                     .WithMany()
@@ -147,24 +131,7 @@ namespace RadioDatabase
                     .HasDefaultValueSql("('bongiboy777')");
             });
 
-            modelBuilder.Entity<UserPlaylist>(entity =>
-            {
-                entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.PlayListId).HasColumnName("PlayListID");
-
-                entity.Property(e => e.UserId).HasColumnName("UserID");
-
-                entity.HasOne(d => d.PlayList)
-                    .WithMany(p => p.UserPlaylists)
-                    .HasForeignKey(d => d.PlayListId)
-                    .HasConstraintName("FK__UserPlayl__PlayL__5AEE82B9");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.UserPlaylists)
-                    .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__UserPlayl__UserI__59FA5E80");
-            });
+           
 
             OnModelCreatingPartial(modelBuilder);
         }

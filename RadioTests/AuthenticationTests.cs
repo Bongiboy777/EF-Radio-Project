@@ -6,8 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using RadioDatabase;
-using Radio;
-
+using InterMediateLayer;
 namespace RadioTests
 {
     public class AuthenticationTests

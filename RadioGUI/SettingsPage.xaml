@@ -25,10 +25,10 @@
         </Grid.RowDefinitions>
 
         <TextBlock Text="Settings" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
-        <Button x:Name="ManageChannels" Content="ManageChannels" Grid.Column="1" Grid.Row="1" FontSize="30"/>
-        <Button x:Name="SearchDirectories" Content="Search Directories" Grid.Column="1" Grid.Row="2" FontSize="30"/>
-        <Button x:Name="AccountSettings" Content="Account Settings" Grid.Column="1" Grid.Row="3" FontSize="30"/>
+        <Button x:Name="ManageChannels" Content="ManageChannels" Grid.Column="1" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="SearchDirectories" Content="Search Directories" Grid.Column="1" Grid.Row="2" FontSize="20"/>
+        <Button x:Name="AccountSettings" Content="Account Settings" Grid.Column="1" Grid.Row="3" FontSize="20"/>
 
-        <Button x:Name="Return" Content="Return" FontSize="30" Margin="0,0,150,50"/>
+        <Button x:Name="Return" Content="Return" FontSize="20" Margin="0,0,150,50"/>
     </Grid>
 </Page>

@@ -10,8 +10,8 @@ namespace InterMediateLayer
 {
     public class UserManager
     {
-        private User user = null;
-        public User User { get => user; private set => user = value; }
+        private static User user = null;
+        public static User User { get => user; private set => user = value; }
 
         public void CreateUser(out string errorMessage, string firstName = "Bongani", string lastName = "Luwemba", string userName = "Bongiboy777", string email = "Bongtheman@outlook.com", string passWord = "1234567")
         {
@@ -66,6 +66,14 @@ namespace InterMediateLayer
                     Console.WriteLine($"Could not add user please check fields: {ex.Message}");
                 }
 
+            }
+        }
+
+        public List<PlayList> GetChannels(User user)
+        {
+            using (var db = new RadioContext())
+            {
+                return db.Users.Include(u => u.PlayLists).Where(x => x.UserId == user.UserId).Select(x => x.PlayLists).First().ToList();
             }
         }
 
@@ -181,6 +189,30 @@ namespace InterMediateLayer
                 return false;
             }
 
+        }
+
+        public bool UpdatePassword(User user, string password)
+        {
+            using (var db = new RadioContext())
+            {
+                try 
+                {
+                    db.Users.First(u => u.UserId == user.UserId).PassWord = password;
+                    db.SaveChanges();
+                    if (user.PassWord == password)
+                    {
+                        return true;
+                    }
+
+                    else { return false; }
+                }
+
+                catch
+                {
+                    return false;
+                }
+                
+            }
         }
 
     }

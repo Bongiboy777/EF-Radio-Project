@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using InterMediateLayer;
 
 namespace RadioGUI
 {
@@ -24,6 +25,15 @@ namespace RadioGUI
         {
             InitializeComponent();
             Return.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = new SettingsPage();
+            if(UserManager.User != null)
+            {
+                Firstname.Text = UserManager.User.FirstName;
+                Lastname.Text = UserManager.User.LastName;
+                Email.Text = UserManager.User.Email;
+                UserName.Text = UserManager.User.Username;
+                Firstname.Text = UserManager.User.FirstName;
+                Firstname.Text = UserManager.User.FirstName;
+            }
         }
     }
 }

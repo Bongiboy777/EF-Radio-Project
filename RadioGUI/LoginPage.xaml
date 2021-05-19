@@ -9,6 +9,7 @@
       Title="LoginPage">
 
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -30,14 +31,16 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Image Source="/images/speaker crop1.jpg" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1"/>
 
-        <Button x:Name="Login" Content="Sign in" Grid.Row="5" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
-        <Button x:Name="Register" Content="Register new account" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.ColumnSpan="3"/>
+        <Button x:Name="Login" Content="Sign in" Grid.Row="5" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+        <Button x:Name="Register" Content="Register new account" HorizontalAlignment="Left" FontSize="20" Grid.ColumnSpan="3"/>
 
         <TextBlock Text="Username" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20"/>
         <TextBox x:Name="UserName" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2"/>
+        
 
         <TextBlock Text="Password" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20"/>
-        <TextBox x:Name="Password" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <PasswordBox x:Name="Password" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

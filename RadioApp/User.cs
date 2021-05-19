@@ -11,7 +11,7 @@ namespace RadioDatabase
         public User(string firstName, string lastName, string userName, string email, string passWord)
         {
             PlayLists = new HashSet<PlayList>();
-            UserPlaylists = new HashSet<UserPlaylist>();
+            
             FirstName = firstName;
             LastName = lastName;
             Username = userName;
@@ -23,7 +23,12 @@ namespace RadioDatabase
         public User()
         {
             PlayLists = new HashSet<PlayList>();
-            UserPlaylists = new HashSet<UserPlaylist>();
+            
+        }
+
+        public string GetFullName()
+        {
+            return $"{FirstName} {LastName}";
         }
 
         public int UserId { get; set; }
@@ -34,6 +39,5 @@ namespace RadioDatabase
         public string Email { get; set; }
         public DateTime DateJoined { get; set; }
         public virtual ICollection<PlayList> PlayLists { get; set; }
-        public virtual ICollection<UserPlaylist> UserPlaylists { get; set; }
     }
 }

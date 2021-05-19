@@ -11,36 +11,64 @@ using RadioDatabase;
 using SpotifyAPI.Web.Auth;
 using System.Net.Mail;
 using Microsoft.EntityFrameworkCore;
-using System.IO;
-using RadioDatabase;
+
 
 namespace InterMediateLayer
 {
     public class PlaylistManager
     {
-          WindowsMediaPlayer x;
-        WindowsMediaPlayerClass channels = new WindowsMediaPlayerClass();
-        
-        public static List<string> mediaPaths = new List<string> { @"C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\media\" };
-        
+        public static WindowsMediaPlayer x = new WindowsMediaPlayer();
 
-            //channels[Channel-1].play();
             public PlaylistManager()
-        {
+            {
 
-        }
+            }
 
         public void AddPlaylist(string name)
         {
-            Directory.CreateDirectory($@"mediaPaths[0]\name");
-            x.playlistCollection.newPlaylist(name);
+            using (var db = new RadioContext())
+            {
+               db.PlayLists.Add(new PlayList() { Name = name, CreatedBy = UserManager.User.UserId, DateCreated = DateTime.Now });
+               db.SaveChanges();
+            }
+           
+
+        }
+
+        public List<Track> GetTracks(PlayList playlist)
+        {
+            using(var db = new RadioContext())
+            {
+                return db.Tracks.Where(t => t.PlayListId == playlist.PlayListId).ToList();
+            }
+        }
+
+        public PlayList GetPlaylist(string playlistName)
+        {
+            using (var db = new RadioContext())
+            {
+                return db.PlayLists.First(p => playlistName == p.Name && p.CreatedBy.Value == UserManager.User.UserId);
+            }
+        }
+
+        public void AddToPlaylist(string playlistName,Track track)
+        {
+            if(playlistName != null)
+            {
+                using (var db = new RadioContext())
+                {
+                    int playlistID = db.PlayLists.First(c => c.Name == playlistName).PlayListId;
+                    db.Tracks.Add(track.SetPlaylist(playlistID));
+                    db.SaveChanges();
+                }
+            }
+
             
         }
 
-        public void AddToPlaylist(string playlistName,string track)
+        public void RemovePlaylist(string playlistname)
         {
-            IWMPMedia music1 = channels.add($@"{mediaPaths[0]}\{track}");
-            x.playlistCollection.getByName(playlistName).Item(0).appendItem(music1);
+            x.playlistCollection.remove(x.playlistCollection.getByName(playlistname).Item(0));
         }
 
     }

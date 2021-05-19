@@ -9,7 +9,6 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using Radio;
 using InterMediateLayer;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -28,30 +27,39 @@ namespace RadioGUI
         {
             InitializeComponent();
             Submit.Click += SubmitDetails;
+            Return.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = new LoginPage();
         }
 
         public void SubmitDetails(object sender, RoutedEventArgs e)
         {
             string message = null;
-            if (Password.Text != ConfirmPassword.Text)
+            if (Password.Password != ConfirmPassword.Password)
             {
                 message += "Passwords must match.\n";
                 
             }
 
-            if (Password.Text.Length < minPasswordLength)
+            if (Password.Password.Length < minPasswordLength)
             {
                message += $"Password must be at least {minPasswordLength} characters long.\n";
+               
+            }
+
+            
+            if(message == null)
+            {
+                userManager.CreateUser(out string errorMessage, Firstname.Text, Lastname.Text, UserName.Text, Email.Text, Password.Password);
+                message += errorMessage;
+            }
+            
+
+            if (message == null || message == "")
+            {
+                MainWindow.MainFrame.Content = new LoginPage();
                 return;
             }
 
-            if(message != null)
-            {
-                MessageBox.Show(message);
-            }
-
-            else { userManager.CreateUser(out string errorMessage, Firstname.Text, Lastname.Text); }
-            MainWindow.MainFrame.Content = new LoginPage();
+            else MessageBox.Show(message);
 
         }
     }

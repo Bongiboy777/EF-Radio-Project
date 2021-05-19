@@ -1,21 +1,10 @@
-﻿using System;
+﻿using InterMediateLayer;
+using RadioDatabase;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.IO;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using Radio;
-using RadioDatabase;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using InterMediateLayer;
+
 namespace RadioGUI
 {
     /// <summary>
@@ -23,55 +12,109 @@ namespace RadioGUI
     /// </summary>
     public partial class ManageChannels : Page
     {
-        PlaylistManager PlaylistManager = new PlaylistManager();
+        PlaylistManager playlistManager = new PlaylistManager();
+        UserManager userManager = new UserManager();
+        FileManager fileManager = new FileManager();
+        List<Track> mediaFiles = new List<Track>();
+
         public ManageChannels()
         {
             InitializeComponent();
             PopulateFileList();
-            BackToSettings.Click += (object sender, RoutedEventArgs e) => MainWindow.MainFrame.Content = new SettingsPage();
+            if (UserManager.User != null)
+            {
+                PopulateChannelList();
+            }
+            PauseButton.Click += MainWindow.radioPlayback.TogglePause;
+            NextTrackButton.Click += MainWindow.radioPlayback.NextTrack;
+            PreviousTrackButton.Click += MainWindow.radioPlayback.PreviousTrack;
+
+            BackToSettings.Click += (object sender, RoutedEventArgs e) => { MainWindow.MainFrame.Content = new SettingsPage(); };
+            volumeslider.Value = MainWindow.radioPlayback.Volume;
+            volumedisplay.Text = MainWindow.radioPlayback.Volume.ToString();
         }
 
         private void AddChannel(object sender, RoutedEventArgs e)
         {
-            PlaylistManager.AddPlaylist(NameChannel.Text);
-            Channels.Items.Add(new Button { Content = $"Channel {Channels.Items.Count + 1}" }); // Add new object
-            
-            
+            string channelName = (NameChannel.Text == "" || NameChannel.Text == null) ? $"Channel {Channels.Items.Count + 1}" : NameChannel.Text;
+            playlistManager.AddPlaylist(NameChannel.Text);
+            Channels.Items.Add(channelName); // Add new object
+
 
         }
+
+
         private void DeleteChannel(object sender, RoutedEventArgs e)
         {
             Channels.Items.Remove(Channels.SelectedItem as Button);
-            for (int i = 0; i < Channels.Items.Count; i++)
-            {
-                Button tempButton = (Channels.Items[i] as Button);
-                tempButton.Content = tempButton.Content.ToString().Contains("Channel") ? $"Channel {i + 1}" : tempButton.Content;
-            }
-        }
+            
 
-        private void Playback(object sender, RoutedEventArgs e)
-        {
-
-            MainWindow.RadioPlayer.UpdateChannels();
-            this.NavigationService.Navigate(MainWindow.RadioPlayer);
         }
 
         public void PopulateFileList()
         {
-            Dictionary<string, string> files = new Dictionary<string, string>();
-            string[] mediaFiles = Directory.GetFiles(PlaylistManager.mediaPaths[0], "*.*").Where(s => new string[] { ".wav", ".mp3" }.Contains(System.IO.Path.GetExtension(s))).ToArray();
+
+            mediaFiles = fileManager.GetAllAudioiles();
             foreach (var item in mediaFiles)
             {
-                files.Add(item.Replace(PlaylistManager.mediaPaths[0], ""), item);
-                MusicFiles.Items.Add(item.Replace(PlaylistManager.mediaPaths[0], ""));
+                MusicFiles.Items.Add(item.Name);
             }
-            
+
+        }
+
+        public void PopulateChannelList()
+        {
+
+            userManager.GetChannels(UserManager.User).Select(x => x.Name).ToList().ForEach(x => Channels.Items.Add(x));
+
+
+            Channels.SelectionChanged += DisplayChannelData;
+        }
+
+        public void DisplayChannelData(object sender, SelectionChangedEventArgs e)
+        {
+            PlayList selectedPlaylist = playlistManager.GetPlaylist(e.AddedItems[0] as string);
+            ChannelPlaylist.Items.Clear();
+            playlistManager.GetTracks(selectedPlaylist)
+                .ForEach(x =>
+                {
+                    ChannelPlaylist.Items.Add(x.Name);
+                }
+                );
+
+            PlaylistInfoName.Text = selectedPlaylist.Name;
+            playlistInfo.Text = $"Date Created: {selectedPlaylist.DateCreated}\nGenre: {selectedPlaylist.Genre}";
+
+
         }
 
         public void PopulatePlayList(object sender, RoutedEventArgs e)
         {
-            ChannelPlaylist.Items.Add(MusicFiles.SelectedItem);
-            PlaylistManager.AddToPlaylist(NameChannel.Text, MusicFiles.SelectedItem as string);
+            Songinforname.Text = MusicFiles.SelectedItem as string;
+            if (!ChannelPlaylist.Items.Contains(MusicFiles.SelectedItem))
+            {
+                ChannelPlaylist.Items.Add(MusicFiles.SelectedItem);
+
+
+
+            }
+
+            if (Channels.SelectedItem != null)
+            {
+                Track selectedTrack = mediaFiles.First(x => x.Name.Contains(MusicFiles.SelectedItem as string));
+                playlistManager.AddToPlaylist(Channels.SelectedItem as string, selectedTrack);
+                Songinfo.Text = $"{selectedTrack.Name}\nGenre: None.\nArtist: {selectedTrack.Artist}.";
+
+            }
+
+
+
+        }
+
+        public void ChangeVolume(object v, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int volume = (int)(v as Slider).Value;
+            MainWindow.radioPlayback.Volume = volume;
         }
 
 

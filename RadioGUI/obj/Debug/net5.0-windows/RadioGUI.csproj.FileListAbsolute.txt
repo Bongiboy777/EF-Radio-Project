@@ -117,3 +117,17 @@ C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Ra
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\SearchDirectories.g.cs
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\AccountSettings.baml
 C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\SearchDirectories.baml
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\Ookii.Dialogs.Wpf.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\Interop.WMPDXMLib.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\Interop.WMPLauncher.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\Interop.MediaPlayer.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\Interop.WMPNSSCI.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\Interop.ACTIVEXLib.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\Interop.WMPLib.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\Interop.WMPDXMLib.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\Interop.WMLSS.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\RadioGUI.csproj.ResolveComReference.cache
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\bin\Debug\net5.0-windows\AxInterop.WMPLib.dll
+C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\obj\Debug\net5.0-windows\App.baml

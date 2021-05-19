@@ -1,9 +1,10 @@
-﻿<Page x:Class="RadioGUI.PlaylistPlayback"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:RadioGUI"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="RadioGUI.PlaylistPlayback"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PlaylistPlayback">
@@ -31,16 +32,46 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="ChannelDisplay" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="7" Background="DarkGreen" Margin="0,0,0,54" Grid.RowSpan="2"  ></TextBlock>
-        <ToggleButton x:Name="TogglePower"  Grid.Column="0" Grid.Row="1" Click="ToggleOnOff" IsChecked="False">Power</ToggleButton>
+        <TextBlock x:Name="ChannelDisplay" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Background="DarkGreen" Margin="0,0,0,54" Grid.RowSpan="2"  />
+        <ToggleButton x:Name="TogglePower"  Grid.Column="0" Grid.Row="1" Click="ToggleOnOff" IsChecked="False" Content="Power"/>
 
-        <Slider x:Name="volumeslider" Grid.ColumnSpan="2" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="120" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="ChangeVolume"/>
-        <TextBox x:Name="volumedisplay" Text="{Binding ElementName=volumeslider, Path=Value, UpdateSourceTrigger=PropertyChanged}" Grid.Column="7" Grid.Row="5"></TextBox>
+        <Slider x:Name="volumeslider" Grid.Column="8" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Bottom" Width="120" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="ChangeVolume">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
 
-        <Button Grid.Column="0" Content="Settings" Click="GotoSettings"></Button>
-        <Button Grid.Column="3" Grid.Row="3" Click="PlaybackControls">Rewind</Button>
-        <Button Grid.Column="4" Grid.Row="3" Click="PlaybackControls">Pause/Play</Button>
-        <Button Grid.Column="5" Grid.Row="3" Click="PlaybackControls">FF</Button>
-        <ListBox x:Name="Channels" Grid.Column="0" Grid.Row="3" Grid.RowSpan="5"/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <TextBox x:Name="volumedisplay" Text="{Binding Value, ElementName=volumeslider, UpdateSourceTrigger=PropertyChanged}" Grid.Column="7" Grid.Row="6" Margin="0,0,0,56" Grid.RowSpan="2"/>
+        <TextBlock x:Name="WelcomeText" Grid.Column="2" Grid.ColumnSpan="4"/>
+
+        <Slider x:Name="Trackposition" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="3"/>
+
+        <Button Grid.Column="0" Content="Settings" Click="GotoSettings"/>
+        
+        <Button x:Name="PreviousTrackButton" Grid.Row="6" Grid.Column="3" FontSize="15">
+            <Image Source="/images/previous-track_icon.png" />
+        </Button>
+
+        <Button x:Name="PauseButton" Grid.Row="6" Grid.Column="4" FontSize="15">
+            <Image Source="/images/playpauseicon.png" Height="35" Width="35" VerticalAlignment="Center" />
+        </Button>
+
+        <Button x:Name="NextTrackButton" Grid.Column="5" Grid.Row="6" FontSize="15">
+            <Image Source="/images/next-track_icon-icons.com_71610.png" />
+        </Button>
+        
+        
+        <Button x:Name="return" Grid.Column="8" Content="Return"/>
+
+        <TextBlock Text="Channels" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20"/>
+        <ListBox x:Name="Channels" Grid.Column="0" Grid.Row="3" Grid.RowSpan="5" Grid.ColumnSpan="2"/>
+        
+        <materialDesign:Card Grid.Column="3" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <ListBox x:Name="Tracklist"/>
+        </materialDesign:Card>
     </Grid>
 </Page>
