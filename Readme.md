@@ -61,11 +61,11 @@ Login page
 
 Playback page 
 
-![ERD](Logged in-Wireframe.png)
+![ERD](ReadmeResources\Logged in-Wireframe.png)
 
 Registration page
 
-![ERD](\ReadmeResources\Create new account-Wireframe.png)
+![ERD](ReadmeResources\Create new account-Wireframe.png)
 
 Settings navigation page
 
@@ -77,11 +77,11 @@ Search directories page
 
 Manage channels page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\ManageChannels-Wireframe.png)
+![ERD](ReadmeResources\ManageChannels-Wireframe.png)
 
 Change details page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\AccountInfo-Wireframe.png)
+![ERD](ReadmeResources\AccountInfo-Wireframe.png)
 
 ## Sprints
 
