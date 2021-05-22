@@ -59,31 +59,31 @@ Initial ERD:
 
 Login page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\Log in page-Wireframe.png)
+![ERD](ReadmeResources\Log in page-Wireframe.png)
 
 Playback page 
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\Logged in-Wireframe.png)
+![ERD](ReadmeResources\Logged in-Wireframe.png)
 
 Registration page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\Create new account-Wireframe.png)
+![ERD](ReadmeResources\Create new account-Wireframe.png)
 
 Settings navigation page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\Settings-Wireframe.png)
+![ERD](\ReadmeResources\Settings-Wireframe.png)
 
 Search directories page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\SearchDirectories-Wireframe.png)
+![ERD](SearchDirectories-Wireframe.png)
 
 Manage channels page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\ManageChannels-Wireframe.png)
+![ERD](ReadmeResources\ManageChannels-Wireframe.png)
 
 Change details page
 
-![ERD](C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\ReadmeResources\AccountInfo-Wireframe.png)
+![ERD](ReadmeResources\AccountInfo-Wireframe.png)
 
 ## Sprints
 
