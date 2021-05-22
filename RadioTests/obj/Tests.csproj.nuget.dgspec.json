@@ -1,0 +1,353 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\InterMediateLayer\\InterMediateLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\InterMediateLayer\\InterMediateLayer.csproj",
+        "projectName": "InterMediateLayer",
+        "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\InterMediateLayer\\InterMediateLayer.csproj",
+        "packagesPath": "C:\\Users\\Bongt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\InterMediateLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Bongt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj": {
+                "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj",
+        "projectName": "RadioDatabase",
+        "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj",
+        "packagesPath": "C:\\Users\\Bongt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Bongt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioGUI\\RadioGUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioGUI\\RadioGUI.csproj",
+        "projectName": "RadioGUI",
+        "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioGUI\\RadioGUI.csproj",
+        "packagesPath": "C:\\Users\\Bongt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioGUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Bongt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\InterMediateLayer\\InterMediateLayer.csproj": {
+                "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\InterMediateLayer\\InterMediateLayer.csproj"
+              },
+              "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj": {
+                "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Ookii.Dialogs.Wpf": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\Tests.csproj",
+        "packagesPath": "C:\\Users\\Bongt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Bongt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj": {
+                "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioApp\\RadioDatabase.csproj"
+              },
+              "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioGUI\\RadioGUI.csproj": {
+                "projectPath": "C:\\Users\\Bongt\\OneDrive\\Documents\\sparta global\\eng86\\Eng86\\C#Data\\EF-Project\\Radio\\RadioGUI\\RadioGUI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.4.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.15.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
