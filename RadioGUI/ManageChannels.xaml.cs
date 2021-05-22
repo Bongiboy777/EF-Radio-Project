@@ -32,6 +32,7 @@ namespace RadioGUI
             BackToSettings.Click += (object sender, RoutedEventArgs e) => { MainWindow.MainFrame.Content = new SettingsPage(); };
             volumeslider.Value = MainWindow.radioPlayback.Volume;
             volumedisplay.Text = MainWindow.radioPlayback.Volume.ToString();
+            
         }
 
         private void AddChannel(object sender, RoutedEventArgs e)
@@ -47,8 +48,7 @@ namespace RadioGUI
         private void DeleteChannel(object sender, RoutedEventArgs e)
         {
             Channels.Items.Remove(Channels.SelectedItem as Button);
-            
-
+           
         }
 
         public void PopulateFileList()

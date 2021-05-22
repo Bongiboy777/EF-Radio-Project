@@ -19,18 +19,20 @@ namespace RadioGUI
         PlaylistManager playlistManager = new PlaylistManager();
         UserManager userManager = new UserManager();
         TrackManager TrackManager = new TrackManager();
-    
+
         public PlaylistPlayback()
         {
-            
+
             InitializeComponent();
             UpdateChannels();
             //MainWindow.radioPlayback.x.CurrentItemChange += TrackChange;
             WelcomeText.Text = LoginPage.loggedIn ? $"Hello {UserManager.User.GetFullName()}" : "Hello user";
-            volumeslider.Value = MainWindow.radioPlayback.Volume != 50 ? MainWindow.radioPlayback.Volume: 50;
+            volumeslider.Value = MainWindow.radioPlayback.Volume != 50 ? MainWindow.radioPlayback.Volume : 50;
             //Binding binding = new Binding("currentPositionString") { Source = MainWindow.radioPlayback.x.controls, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged, Mode = BindingMode.OneWay };
             //binding.IsAsync = true;
             //BindingOperations.SetBinding(volumedisplay, TextBox.TextProperty, binding);
+
+
 
             NextTrackButton.Click += (object sender, RoutedEventArgs e) => { MainWindow.radioPlayback.NextTrack(sender, e); UpdateChanneldisplay(); };
             PauseButton.Click += MainWindow.radioPlayback.TogglePause;
@@ -38,15 +40,18 @@ namespace RadioGUI
             Channels.SelectionChanged += PopulateTrackList;
 
             Trackposition.Visibility = Visibility.Hidden;
- 
-            @return.Click += (object sender, RoutedEventArgs e) => { MainWindow.radioPlayback.Stop(); MainWindow.MainFrame.Content = new LoginPage(); };
 
+            @return.Click += (object sender, RoutedEventArgs e) => { MainWindow.radioPlayback.Stop(); MainWindow.MainFrame.Content = new LoginPage(); };
         }
+        
 
         public void UpdateChanneldisplay()
         {
             ChannelDisplay.Text = Channels.SelectedItem != null ? $"Playing {(Channels.SelectedItem as Button).Content as string} - {Tracklist.SelectedItem as string} ": "Playing track" ;
             
+           
+
+
         }
 
         public void ToggleOnOff(object sender, RoutedEventArgs e)

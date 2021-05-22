@@ -2,12 +2,12 @@
 
 ## Contents
 
-1.  [Project Description] (# Project Description)
-1.  [Preparation] (# Preparation)
-1.  [Approach] (# Approach)
-1.  [Sprints] (# Sprints)
-1.  [Retrospective] (# Retrospective)
-1.  [Installation Guide] (# Installation Guide)
+1.  [Project Description](# Project Description)
+1.  [Preparation](# Preparation)
+1.  [Approach](# Approach)
+1.  [Sprints](# Sprints)
+1.  [Final Product](# Final Product)
+1.  [Installation Guide](# Installation Guide)
 
 
 
@@ -35,10 +35,12 @@ The application ideas were independently determined, planned and executed by eac
 
 
 1. Database layer.
+
 	- Users.
 	- Playlists.
 	- Tracks.
 2. Intermediate/business layer.
+
 	- User manager.
 	- Playlist manager.
 	- Track manager.
@@ -53,7 +55,7 @@ Initial ERD:
 
 ![ERD](ReadmeResources/ERD-BeforePresentation.png)
 
-## Wireframe (Created in sprint 3):
+## Wireframe (Created in sprint 2):
 
 Login page
 
@@ -87,174 +89,259 @@ Change details page
 
 - ## Sprint 1 - 11/05/2021
 
+- Start
+
+- ![Start](ReadmeResources\Sprint1Start.png)
+
+- End
+
+- ![Start](ReadmeResources\Sprint1End.png)
+
   ### Review 
 
-  Completed
+  #### User Stories
 
-  1. User Story 1.1A
-  2. Cleanup previous code from the radio project and move files
-  3. Create ERD
-  4. Create database
-  5. Reorganised project
-
-  Not Completed
-
-  1. Implement database in log in and registration
-  2. Create settings page
-  3. Complete/update project board
-
-  Next steps
-
-  1. Complete not completed steps 
-  2. Start building playlist functions and tests.
-
+	- [x] 1.1A
+  - [x] 1.2A
+  - [x] 1.1C
+  - [x] 3.1A
+  - [x] 3.3A - From radio project
+  - [x] 3.3B - From radio project
+  - [x] 2.1A - From radio project
+  - [x] 2.1C - From radio project
+  
+  #### Additional
+  
+  ###### Completed:
+  
+  1. Create ERD
+  2. Scaffold database
+  3. Cleaned up code from previous project
+  4. Reorganized project
+  
+  ###### Not completed:
+  
+  1. Implement database
+  
+  ###### Next steps:
+  
+  1. Implement database
+  
   ### RetroSpective
-
+  
   <p>
   Sprint was somewhat productive, but was held back by minimal planning of database aspects and general foresight. Could have been managed better but made steady progress. Have clearer idea of upcoming problems and potential solutions regarding database. For next time, plan out the architecture and build a mental user story going through all processes.
   </p>
   
-  
+
 
   - ## Sprint 2 - 12/05/2021
 
+  - Start
+
+  - ![Start](ReadmeResources\Sprint2Start.png)
+
+  - End
+
+  - ![Start](ReadmeResources\Sprint2End.png)
+
   ### Review 
 
-  Completed
+ #### User Stories
 
-  1. Cleanup previous code from the radio project and move files
-  2. Create ERD
-  3. Create database
-  4. Set up registration and log in pages with buttons, fields and navigation
-  5. Reorganised project
+  - [x] 1.1D
+  - [x] 1.2C
+  - [x] 1.1B
 
-  Not Completed
+#### Additional
 
-  1. Implement database in log in and registration
-  2. Create settings page
-  3. Complete/update project board
+######  Completed:
 
-  Next steps
+    1. Wireframing the GUI.
 
-  1. Complete not completed steps 
-  2. Start building playlist functions and tests.
+###### Not Completed:
+
+    1. Create settings page
+
+###### Next steps:
+
+    1. Create settings page.
+    2.  Add more tests for user manager class.
 
   ### RetroSpective
 
-  <p>
-  Sprint was somewhat productive, but was held back by minimal planning of database aspects and general foresight. Could have been managed better but made steady progress. Have clearer idea of upcoming problems and potential solutions regarding database. For next time, plan out the architecture and build a mental user story going through all processes.
-  </p>
-
-
-    - ## Sprint 3 - 13/05/2021
-
-  ### Review 
-
-  Completed
-
-  1. Wireframing the gui
-  2. Adding settings page and completing navigation 
-  3. Adding functions to add and remove playlist - User story 2.2A
-  4. Integrating tracks column with IWMP interface
-
-  Not Completed
-
-  1. Testing playlist functions to add and remove
-  2. Adding tracks to playlist functions
-  3. Adding search directories
-
-  Next steps
-
-  1. Find a way to add tracks to playlist
-  2. Test all playlist functions
-  3. Add search directory functionality
+Was a wise decision to wireframe before further GUI design execution. Completed all items on sprint backlog, was generally a more focussed session than last time.
 
 
 
-Could have been much better organized
 
-- ## Sprint 4 - 14/05/2021 - Incomplete
+- ## Sprint 3 - 13/05/2021
+
+- Start
+
+- ![Start](ReadmeResources\Sprint3Start.png)
+
+- End
+
+- ![Start](ReadmeResources\Sprint3End.png)
 
   ### Review 
 
-  Completed
+   #### User Stories
 
+    - [x] 1.2D
+    - [x] 1.2B
+
+  #### Additional
+
+  ###### Completed:
+
+  1. Adding settings page and completing navigation.
+  4. Integrating tracks column with IWMP interface.
+
+  ###### Not Completed:
+
+  1. Testing playlist functions to add and remove.
+
+  ###### Next steps:
+
+  1. Find a way to add tracks to playlist.
+  2. Test playlist functions.
+
+
+
+  ### RetroSpective
+
+In future, should decide to use libraries with good documentation, as IWMP caused a lot of problems this session. Accomplished all user stories, but did not get a desired result when using the music player. Should have done more research into WMP library.
+
+- ## Sprint 4 - 14/05/2021
+
+- Start
+
+- ![Start](ReadmeResources\Sprint4Start.png)
+
+- End
+
+- ![Start](ReadmeResources\Sprint4End.png)
+
+  ### Review 
+
+  #### User Stories
+
+  - [x] 1.3A
+  - [x] 2.4A
+  - [x] 2.3A
+  - [x] 3.2A
+  - [x] 2.1B - Finished in morning
+  
+  #### Additional 
+  
+  ###### Completed:
+  
   1. Decoupled tracks class from IWMP interface
   2. Removed unnecessary tables from database
-  3. Adding functions to add and remove playlist
-  4. Integrating tracks column with IWMP interface
-
-  Not Completed
-
+  3. Created Settings page
+  
+  ###### Not Completed:
+  
   1. Testing playlist functions to add and remove
   2. Adding tracks to playlist functions
   3. Adding search directories
-
-  Next steps
-
+  
+  ###### Next steps:
+  
   1. Find a way to add tracks to playlist
-  2. Test all playlist functions
+  
+  2. Test playlist functions
+  
   3. Add search directory functionality.
-
+  
+     ### RetroSpective
+  
+     Sprint started slow, but found great progress in new strategy for using WMP library, cleaning up ERD/database also very helpful. Overall a good sprint and good recovery from yesterday. However the sprint would be better if I approached more methodically/TDD approach so I can fit tests in.
+  
   <p>
 
 
   </p>
 
-- ## Sprint 5 - 15/05/2021 - Incomplete
+- ## Sprint 5 - 15/05/2021
+
+- Start
+
+- ![Start](ReadmeResources\Sprint5Start.png)
+
+- End
+
+- ![Start](ReadmeResources\Sprint5End.png)
 
   ### Review 
 
-  Completed
+  #### User Stories
 
-  1. Wireframing the gui
-  2. Adding settings page and completing navigation
-  3. Adding Pfunctions to add and remove playlist
-  4. Integrating tracks column with IWMP interface
+  - [x] 2.2B
+  - [x] 1.1E
+  - [ ] 2.2A
+  - [ ] 1.4A
 
-  Not Completed
+#### Additional
 
-  1. Testing playlist functions to add and remove
-  2. Adding tracks to playlist functions
-  3. Adding search directories
+###### Completed:
 
-  Next steps
+1. Adding more return buttons for more navigation.
+2. Create tests for 2.2B
 
-  1. Find a way to add tracks to playlist
-  2. Test all playlist functions
-  3. Add search directory functionality
 
-  <p>
 
+#### RetroSpective
+
+Created methods to change details and passed tests, however have not finished account info page. To improve sprint, next time I should allocate a set period during weekend to focus on sprint.
 
   </p>
 
 - ## Sprint 6 - 16/05/2021
 
+- Start
+
+- ![Start](ReadmeResources\Sprint6Start.png)
+
+- End
+
+- ![Start](ReadmeResources\Sprint6End.png)
+
   ### Review 
 
-  Completed
+  1. #### User Stories
 
-  1. Started updating, incorporating Material designer.
-  2. Finished folder browser, used okaii folder dialog.
-  3. Added Filemanager class and functions.
-  
-  Not Completed
-  
-  1. Finishing visual updates
-  
-  2. Logo
-  
-  3. Return buttons.
-  
-     
-  
-  Next steps
-  
-  1. Finish updating visuals
-  2. Fix new bugs
-  3. Add return button functionality.
-  
+     - [x] 2.5A
+     - [x] 3.2C
+     - [x] 3.2B
+     - [x] 3.1B
+     - [ ] 2.2A
+     - [ ] 1.4A
+#### Additional
+
+###### Completed:
+
+1. Fixed playback bugs.
+######  Not Completed:
+
+1. Visual update
+   
+2. Logo
+   
+3. Return buttons.
+
+
+###### Next steps:
+
+1. Update visuals
+2. Fix new bugs
+
+#### RetroSpective
+
+A very productive sprint, a lot of problems however with folder explorer, which took most time. Better time allocation than last sprint. Again however a methodical approach would be better.
+
   <p>
 
 
@@ -262,24 +349,52 @@ Could have been much better organized
 
   - ## Sprint 7 - 17/05/2021
 
+  - Start
+
+- ![Start](ReadmeResources\Sprint7Start.png)
+
+- End
+
+- ![Start](ReadmeResources\Sprint7End.png)
+
   ### Review 
 
-  Completed
+  #### User Stories
 
-    1. Changed listbox design by adding card background to each one from material designer.
-    2. Added logo
-    3. Fixed playback bugs
-    4. Added return button to registration page
-    5. Changed playback button display to typical icons
-
-  Not Completed
-
+  - [x] 2.2A - Testing finally done.
+  - [ ] 2.2B
+  - [ ] 1.4A
+  
+  #### Additional
+  
+  ###### Completed:
+  
+  1. Changed some lists designs by adding card background to each one from material designer.
+  
+  2. Added logo
+  
+  3. Fixed playback bugs
+  
+  4. Added return button to registration page
+  
+  5. Changed playback button display to typical icons
+  
+     
+  
+  ###### Not Completed:
+  
     1. Finishing readme
-
-  Next steps
-
+  
+  ###### Next steps:
+  
   1. This readme.
-    2. Reorganize project board.
+  2. Presentation.
+
+
+
+  ### RetroSpective
+
+Final sprint very productive, big difference in changing the appearance last. Was not a well designed sprint, as objective was to get product ready, however I am happy with the progress made and result so far.
 
 
 
