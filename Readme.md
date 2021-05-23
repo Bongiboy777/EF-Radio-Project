@@ -433,18 +433,32 @@ Final account info page:
 ## Setup
 
 1. Install and upgrade VS2019 (Visual studio 2019) version must be community or better.
-2. If you don't already have these tools, install using modify installation in visual studio installer.
+
+
+3. If you don't already have these tools, install using modify installation in visual studio installer.
    1. Data storage and processing
    2. .Net desktop development.
+   
+   
 3. Open MyJukebox.sln in VS2019 and if not prompted, use right click on solution in solution explorer, navigate to manage Nuget packages for solution, and install
    1. Entity Framework Core
    2. Entity Framework Core.Tools
    3. Entity Framework Core.SqlServer
+
+
 4. On top bar navigate to Tools > Nuget Package Manager  and select the PCM (package manager console).
-5. At the bottom of window, select new PCM window and change the default project to radio database.
-6. In the PCM console type Add-Migration Initial Create and run (Enter).
-7. In the PCM console type Update-Database and run.
-8. Run the programme using Debug/Run button at top of window.
+
+
+6. At the bottom of window, select new PCM window and change the default project to radio database.
+
+
+8. In the PCM console type Add-Migration Initial Create and run (Enter).
+
+
+10. In the PCM console type Update-Database and run.
+
+
+12. Run the programme using Debug/Run button at top of window.
 
 
 
