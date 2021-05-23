@@ -6,7 +6,7 @@
 1.  [Preparation](#Preparation)
 1.  [Sprints](#Sprints)
 1.  [Final Product](#Final%20Product)
-1.  [Installation Guide](#Installation%20Guide)
+1.  [Installation Guide](#InstallationGuide)
 
 
 
