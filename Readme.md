@@ -53,37 +53,37 @@ The application ideas were independently determined, planned and executed by eac
 
 Initial ERD:
 
-![ERD](ReadmeResources/ERD-BeforePresentation.png)
+![ERD](/ReadmeResources/ERD-BeforePresentation.png)
 
 ## Wireframe (Created in sprint 2):
 
 Login page
 
-![ERD](ReadmeResources\Log in page-Wireframe.png)
+![ERD](/ReadmeResources/Log in page Wireframe.png)
 
 Playback page 
 
-![ERD](ReadmeResources\Logged in-Wireframe.png)
+![ERD](/ReadmeResources/Logged in Wireframe.png)
 
 Registration page
 
-![ERD](ReadmeResources\Create new account-Wireframe.png)
+![ERD](/ReadmeResources/Create new account-Wireframe.png)
 
 Settings navigation page
 
-![ERD](\ReadmeResources\Settings-Wireframe.png)
+![ERD](/ReadmeResources/Settings-Wireframe.png)
 
 Search directories page
 
-![ERD](SearchDirectories-Wireframe.png)
+![ERD](/ReadmeResources/SearchDirectories-Wireframe.png)
 
 Manage channels page
 
-![ERD](ReadmeResources\ManageChannels-Wireframe.png)
+![ERD](/ReadmeResources/ManageChannels-Wireframe.png)
 
 Change details page
 
-![ERD](ReadmeResources\AccountInfo-Wireframe.png)
+![ERD](/ReadmeResources/AccountInfo-Wireframe.png)
 
 ## Sprints
 
@@ -91,11 +91,11 @@ Change details page
 
 - Start
 
-- ![Start](ReadmeResources\Sprint1Start.png)
+- ![Start](/ReadmeResources/Sprint1Start.png)
 
 - End
 
-- ![Start](ReadmeResources\Sprint1End.png)
+- ![Start](/ReadmeResources/Sprint1End.png)
 
   ### Review 
 
@@ -139,11 +139,11 @@ Change details page
 
   - Start
 
-  - ![Start](ReadmeResources\Sprint2Start.png)
+  - ![Start](/ReadmeResources/Sprint2Start.png)
 
   - End
 
-  - ![Start](ReadmeResources\Sprint2End.png)
+  - ![Start](/ReadmeResources/Sprint2End.png)
 
   ### Review 
 
@@ -179,11 +179,11 @@ Was a wise decision to wireframe before further GUI design execution. Completed 
 
 - Start
 
-- ![Start](ReadmeResources\Sprint3Start.png)
+- ![Start](/ReadmeResources/Sprint3Start.png)
 
 - End
 
-- ![Start](ReadmeResources\Sprint3End.png)
+- ![Start](/ReadmeResources/Sprint3End.png)
 
   ### Review 
 
@@ -218,11 +218,11 @@ In future, should decide to use libraries with good documentation, as IWMP cause
 
 - Start
 
-- ![Start](ReadmeResources\Sprint4Start.png)
+- ![Start](/ReadmeResources/Sprint4Start.png)
 
 - End
 
-- ![Start](ReadmeResources\Sprint4End.png)
+- ![Start](/ReadmeResources/Sprint4End.png)
 
   ### Review 
 
@@ -269,11 +269,11 @@ In future, should decide to use libraries with good documentation, as IWMP cause
 
 - Start
 
-- ![Start](ReadmeResources\Sprint5Start.png)
+- ![Start](/ReadmeResources/Sprint5Start.png)
 
 - End
 
-- ![Start](ReadmeResources\Sprint5End.png)
+- ![Start](/ReadmeResources/Sprint5End.png)
 
   ### Review 
 
@@ -303,11 +303,11 @@ Created methods to change details and passed tests, however have not finished ac
 
 - Start
 
-- ![Start](ReadmeResources\Sprint6Start.png)
+- ![Start](/ReadmeResources/Sprint6Start.png)
 
 - End
 
-- ![Start](ReadmeResources\Sprint6End.png)
+- ![Start](/ReadmeResources/Sprint6End.png)
 
   ### Review 
 
@@ -402,35 +402,35 @@ Final sprint very productive, big difference in changing the appearance last. Wa
 
 Final ERD:
 
-![ERD](ReadmeResources/ERD-AfterPresentation.png)
+![ERD](/ReadmeResources/ERD-AfterPresentation.png)
 
 Final login page:
 
-![ERD](ReadmeResources/LoginPage.png)
+![ERD](/ReadmeResources/LoginPage.png)
 
 Final registration page:
 
-![ERD](ReadmeResources/RegistrationPage.png)
+![ERD](/ReadmeResources/RegistrationPage.png)
 
 Final playback page:
 
-![ERD](ReadmeResources/PlaybackPage.png)
+![ERD](/ReadmeResources/PlaybackPage.png)
 
 Final playlist management page:
 
-![ERD](ReadmeResources/ManageChannelsPage.png)
+![ERD](/ReadmeResources/ManageChannelsPage.png)
 
 Final search directory page:
 
-![ERD](ReadmeResources/SearchDirectoriesPage.png)
+![ERD](/ReadmeResources/SearchDirectoriesPage.png)
 
 Final settings navigation page:
 
-![ERD](ReadmeResources/SettingsPage.png)
+![ERD](/ReadmeResources/SettingsPage.png)
 
 Final account info page:
 
-![ERD](ReadmeResources/AccountInfoPage.png)
+![ERD](/ReadmeResources/AccountInfoPage.png)
 
 
 
