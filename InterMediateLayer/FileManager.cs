@@ -14,7 +14,7 @@ namespace InterMediateLayer
 {
     public class FileManager
     {
-        public static List<string> mediaPaths = new List<string> { @"C:\Users\Bongt\OneDrive\Documents\sparta global\eng86\Eng86\C#Data\EF-Project\Radio\RadioGUI\media\" };
+        public static List<string> mediaPaths = new List<string>();
         public List<Track> GetAllAudioiles()
         {
             WindowsMediaPlayerClass helper = new WindowsMediaPlayerClass();
