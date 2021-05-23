@@ -6,9 +6,7 @@ using System.Collections.Generic;
 using WMPLib;
 using WMPDXMLib;
 using System.IO;
-using SpotifyAPI;
 using RadioDatabase;
-using SpotifyAPI.Web.Auth;
 using System.Net.Mail;
 using Microsoft.EntityFrameworkCore;
 
