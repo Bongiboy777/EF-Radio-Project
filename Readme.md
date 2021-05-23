@@ -351,11 +351,11 @@ A very productive sprint, a lot of problems however with folder explorer, which 
 
   - Start
 
-- ![Start](ReadmeResources\Sprint7Start.png)
+- ![Start](/ReadmeResources/Sprint7Start.png)
 
 - End
 
-- ![Start](ReadmeResources\Sprint7End.png)
+- ![Start](/ReadmeResources/Sprint7End.png)
 
   ### Review 
 
