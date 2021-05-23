@@ -31,9 +31,6 @@ The application ideas were independently determined, planned and executed by eac
 <p>
     My goal was to expand on a smaller project started on the course, which was a simple radio/playlist project. The project functions as a playlist creator and music player and was chosen because of my passion for music and already having a good idea of what I wanted it to become. </p>
 
-​    
-
-
 1. Database layer.
 
 	- Users.
@@ -59,15 +56,15 @@ Initial ERD:
 
 Login page
 
-![ERD](/ReadmeResources/Log in page Wireframe.png)
+![ERD](/ReadmeResources/Log%20in%20page-Wireframe.png)
 
 Playback page 
 
-![ERD](/ReadmeResources/Logged in Wireframe.png)
+![ERD](/ReadmeResources/Logged%20in-Wireframe.png)
 
 Registration page
 
-![ERD](/ReadmeResources/Create new account-Wireframe.png)
+![ERD](/ReadmeResources/Create%20new%20account-Wireframe.png)
 
 Settings navigation page
 
