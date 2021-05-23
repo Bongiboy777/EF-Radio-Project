@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,11 +24,13 @@ namespace PlaylistTests
     class PlaylistTests
     {
         PlaylistManager playlistManager;
+        UserManager userManager = new UserManager();
         [SetUp]
         public void Setup()
         {
             playlistManager = new PlaylistManager();
-            User testUser = new User() {FirstName="test", LastName="test" };
+            userManager.CreateUser("test","test","test","test","test");
+
         }
 
         [Test]
@@ -36,8 +38,8 @@ namespace PlaylistTests
         {
             using (var db = new RadioContext())
             {
-                playlistManager.AddPlaylist("Zachariah");
-                Assert.DoesNotThrow(() =>db.PlayLists.Where(u => u.Name == "Zachariah").First());
+                playlistManager.AddPlaylist("TestPlaylist", db.Users.First(u => u.FirstName == "test" && u.Email == "test").UserId);
+                Assert.DoesNotThrow(() =>db.PlayLists.Where(u => u.Name == "TestPlaylist").First());
             }
                 
         }
@@ -49,18 +51,25 @@ namespace PlaylistTests
             using (var db = new RadioContext())
             {
                 PlayList testPlaylist = null;
+                User userCheck = null;
                 try
                 {
                     testPlaylist = db.PlayLists.First(p => p.Name == "TestPlaylist");
+                    userCheck = db.Users.First(u => u.FirstName == "test" && u.Email == "test");
+
+
                 }
                 catch(InvalidOperationException o) 
                 { 
                     
                 }
-                if(testPlaylist != null)
+                if(testPlaylist != null && userCheck != null)
                 {
+                    db.Users.Remove(db.Users.First(u => u.FirstName == "test" && u.Email == "test"));
                     db.PlayLists.Remove(db.PlayLists.First(p => p.Name == "TestPlaylist"));
                 }
+
+                
                 
             }
         }
