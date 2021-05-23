@@ -2,12 +2,12 @@
 
 ## Contents
 
-1.  [Project Description](# Project Description)
-1.  [Preparation](# Preparation)
-1.  [Approach](# Approach)
-1.  [Sprints](# Sprints)
-1.  [Final Product](# Final Product)
-1.  [Installation Guide](# Installation Guide)
+1.  [Project Description](#Project%20Description)
+1.  [Preparation](#Preparation)
+1.  [Approach](#Approach)
+1.  [Sprints](#Sprints)
+1.  [Final Product](#Final Product)
+1.  [Installation Guide](#Installation%20Guide)
 
 
 
