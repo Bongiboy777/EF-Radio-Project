@@ -6,7 +6,6 @@ using WMPDXMLib;
 using System.Windows.Data;
 using System.Runtime.InteropServices;
 using System.Windows.Controls;
-using AxWMPLib;
 
 namespace RadioGUI
 {
