@@ -4,7 +4,6 @@
 
 1.  [Project Description](#Project%20Description)
 1.  [Preparation](#Preparation)
-1.  [Approach](#Approach)
 1.  [Sprints](#Sprints)
 1.  [Final Product](#Final%20Product)
 1.  [Installation Guide](#Installation%20Guide)
